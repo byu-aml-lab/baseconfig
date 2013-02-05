@@ -47,6 +47,7 @@ ssmtp
 # Tools and Shells
 ack
 bash-completion
+beep
 collectl
 cowsay
 ddrescue
