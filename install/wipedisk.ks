@@ -7,7 +7,7 @@ lang en_US.UTF-8
 keyboard us
 
 #Use HTTP installation media
-url --url http://mirrors/releases/18/Fedora/i386/os
+url --url http://mirrors/fedora/releases/18/Fedora/i386/os
 
 #---------------------------------------------------------#
 # PRE-INSTALLATION

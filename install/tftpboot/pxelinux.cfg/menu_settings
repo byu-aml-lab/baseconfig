@@ -1,0 +1,17 @@
+# Configuration for vesamenu.c32
+
+# Timeout in tenths of a second.
+timeout 300
+
+menu background background.jpg
+menu title Boot Menu
+
+menu color unsel * #ee000000 * none
+menu color sel * #ee000000 #66000000 none
+menu color help * #ee000000 #66000000 none
+
+menu color title * #ee0000ff * none
+menu color border * #ee0000ff * none
+menu color tabmsg * #ee0000ff * none
+menu color timeout_msg * #ccff0000 * none
+menu color timeout * #ccff0000 * none

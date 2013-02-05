@@ -1,0 +1,9 @@
+label x86_64-rescue
+    menu label Fedora x86_64 Rescue
+    kernel f18-x86_64/vmlinuz
+    append initrd=f18-x86_64/initrd.img ip=dhcp rescue
+
+    text help
+
+    Enter the Fedora f18-x86_64 Installer in Rescue mode.
+    endtext

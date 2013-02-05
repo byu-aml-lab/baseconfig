@@ -1,0 +1,11 @@
+default f18-i386-interactive
+
+label f18-i386-interactive
+    menu label Fedora 18 i386: Interactive Install
+    kernel f18-i386/vmlinuz
+    append initrd=f18-i386/initrd.img ip=dhcp repo=http://mirrors/fedora/releases/18/Fedora/i386/os/
+
+    text help
+
+    Install Fedora 18 i386 interactively.
+    endtext

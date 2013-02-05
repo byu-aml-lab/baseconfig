@@ -1,0 +1,11 @@
+default f18-x86_64-interactive
+
+label f18-x86_64-interactive
+    menu label Fedora 18 x86_64: Interactive Install
+    kernel f18-x86_64/vmlinuz
+    append initrd=f18-x86_64/initrd.img ip=dhcp repo=http://mirrors/fedora/releases/18/Fedora/x86_64/os/
+
+    text help
+
+    Install Fedora 18 x86_64 interactively.
+    endtext

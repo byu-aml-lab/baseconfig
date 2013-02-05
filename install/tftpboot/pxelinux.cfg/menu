@@ -1,0 +1,5 @@
+# PXELINUX Configuration
+
+default vesamenu.c32
+append pxelinux.cfg/menu_settings pxelinux.cfg/disk pxelinux.cfg/f18-x86_64-interactive pxelinux.cfg/f18-i386-interactive pxelinux.cfg/f18-x86_64-rescue pxelinux.cfg/f18-i386-rescue pxelinux.cfg/wipedisk pxelinux.cfg/memtest86+
+prompt 0

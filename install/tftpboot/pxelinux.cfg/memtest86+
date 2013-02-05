@@ -1,0 +1,10 @@
+default memtest86+
+
+label memtest86+
+    menu label Memtest86+
+    kernel memtest86+
+
+    text help
+
+    Run Memtest86+.
+    endtext
