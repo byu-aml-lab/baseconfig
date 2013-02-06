@@ -1,7 +1,7 @@
 label x86_64-rescue
     menu label Fedora x86_64 Rescue
     kernel f18-x86_64/vmlinuz
-    append initrd=f18-x86_64/initrd.img ip=dhcp rescue
+    append initrd=f18-x86_64/initrd.img ip=dhcp repo=http://mirrors/fedora/releases/18/Fedora/x86_64/os/ rescue
 
     text help
 

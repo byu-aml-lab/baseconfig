@@ -1,7 +1,7 @@
 label i386-rescue
     menu label Fedora i386 Rescue
     kernel f18-i386/vmlinuz
-    append initrd=f18-i386/initrd.img ip=dhcp rescue
+    append initrd=f18-i386/initrd.img ip=dhcp repo=http://mirrors/fedora/releases/18/Fedora/i386/os/ rescue
 
     text help
 
