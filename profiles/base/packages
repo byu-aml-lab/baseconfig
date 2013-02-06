@@ -149,10 +149,8 @@ ldd-pdf
 @ printing
 
 # Desktop environments
-@ cinnamon-desktop
 @ gnome-desktop
 @ lxde-desktop
-@ mate-desktop
 @ xfce-desktop
 
 # X Windows
