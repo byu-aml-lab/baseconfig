@@ -1,0 +1,29 @@
+Here are nice commands for rsyncing from the CS mirror:
+    rsync -avPH --exclude=debug --exclude=source --exclude=\*.iso root@mirrors.cs.byu.edu:/mirrors/fedora/releases/16 /mnt/mirrors/fedora/releases
+    rsync -avPH --exclude=debug --exclude=SRPMS --exclude=\*.iso root@mirrors.cs.byu.edu:/mirrors/fedora/updates/16 /mnt/mirrors/fedora/updates
+
+
+To enable the PXE server, run:
+    mount /dev/sdX1 /mnt/mirrors
+    /config/bin/kwik-e-mart.sh start
+
+
+In Anaconda, the Installation Repo should point to kwik-e-mart/releases thanks
+to pxelinux.  Add the additional repository
+    name: kwik-updates
+    type: HTTP/FTP
+    url: http://kwik-e-mart:8080/updates/16/x86_64
+
+
+To disable the PXE server, run:
+    /config/bin/kwik-e-mart.sh stop
+    umount /mnt/mirrors
+
+
+To use the mirror for running systemize on the target machine:
+    option A:
+        leave the hard drive on the other machine with kwik-e-mart.sh on
+    option B:
+        [move the hard drive over]
+        mount /dev/sdX1 /mnt/mirrors
+
