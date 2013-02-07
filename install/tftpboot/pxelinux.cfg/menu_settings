@@ -3,7 +3,9 @@
 # Timeout in tenths of a second.
 timeout 300
 
-menu background background.jpg
+#menu color screen * #ffccccee #ffccccee none
+#menu background background.jpg
+#menu background #ffccccee
 menu title Boot Menu
 
 menu color unsel * #ee000000 * none
