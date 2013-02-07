@@ -246,4 +246,7 @@ pdftk
 wv
 xpdf
 
+# graphical systems tools
+gparted
+
 %end
