@@ -74,4 +74,15 @@ python3-tools
 scipy
 sympy
 
+# prerequisites for building pypy from source (most are installed already)
+bzip2-devel
+expat-devel
+gc-devel
+libffi-devel
+ncurses-devel
+openssl-devel
+pkgconfig
+python-devel
+zlib-devel
+
 %end
