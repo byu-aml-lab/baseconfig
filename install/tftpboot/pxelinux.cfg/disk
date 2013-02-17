@@ -1,0 +1,17 @@
+# TODO: Consider loading the chain.c32 kernel instead of using localboot.
+# The difference is that chain.c32 actually goes to the disk, whereas
+# localboot simply falls back to the BIOS.
+
+default disk
+
+label disk
+    menu label Boot from Hard Disk
+    localboot 0
+    #append=
+
+    text help
+
+    Boot from Hard Disk.
+
+    This is the default option.  It boots from the local hard disk.
+    endtext
