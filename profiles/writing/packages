@@ -5,6 +5,7 @@
 # http://jnovy.fedorapeople.org/texlive/2012/packages.fc17/
 texlive-release
 texlive
+texlive-bbm
 texlive-collection-documentation-english
 texlive-collection-fontsrecommended
 texlive-collection-latexextra
