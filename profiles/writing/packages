@@ -10,6 +10,7 @@ texlive-collection-documentation-english
 texlive-collection-fontsrecommended
 texlive-collection-latexextra
 texlive-collection-mathextra
+texlive-elsarticle
 tex-latex
 tex-biblatex
 tex-biblatex-doc
