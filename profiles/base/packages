@@ -160,6 +160,7 @@ lightdm-gtk
 xbindkeys
 xorg-x11-xinit-session
 xorg-x11-apps
+rdesktop
 
 # Fonts
 @ fonts
@@ -187,6 +188,7 @@ pavucontrol
 @ virtualization
 qemu-kvm
 libvirt
+libvirt-daemon-qemu
 virt-manager
 wine
 
