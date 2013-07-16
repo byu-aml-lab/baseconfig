@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Enable kernel sysrq:
-sed -i 's/^\(kernel\.sysrq\).*$/\1 = 1/' /etc/sysctl.conf
+echo "kernel.sysrq = 1" >/etc/sysctl.d/sysrq.conf
 
 # Turn off SELinux.
 setenforce 0
