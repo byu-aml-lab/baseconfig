@@ -54,6 +54,7 @@ python3-devel
 python3-docutils
 python3-httplib2
 python3-inotify
+python3-ipython
 python3-nose
 python3-numpy
 python3-pip
