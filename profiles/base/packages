@@ -26,6 +26,7 @@ memtest86+
 - mlocate
 ntfs-3g
 redhat-lsb
+strace
 syslinux
 sysstat
 tunctl
