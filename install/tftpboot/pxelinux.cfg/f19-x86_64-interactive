@@ -1,0 +1,11 @@
+default f19-x86_64-interactive
+
+label f19-x86_64-interactive
+    menu label Fedora 19 x86_64: Interactive Install
+    kernel f19-x86_64/vmlinuz
+    append initrd=f19-x86_64/initrd.img ip=dhcp repo=http://mirrors/fedora/releases/19/Fedora/x86_64/os/
+
+    text help
+
+    Install Fedora 19 x86_64 interactively.
+    endtext

@@ -1,0 +1,9 @@
+label x86_64-rescue
+    menu label Fedora x86_64 Rescue
+    kernel f19-x86_64/vmlinuz
+    append initrd=f19-x86_64/initrd.img ip=dhcp repo=http://mirrors/fedora/releases/19/Fedora/x86_64/os/ rescue
+
+    text help
+
+    Enter the Fedora f19-x86_64 Installer in Rescue mode.
+    endtext
