@@ -1,0 +1,6 @@
+%packages --ignoremissing
+
+golang
+golang-vim
+
+%end
