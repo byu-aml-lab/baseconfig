@@ -27,5 +27,5 @@ if ! rpm -q nautilus-dropbox; then
     # this assumes the first rpm listed is the right one
     filename=$(curl http://linux.dropbox.com/fedora/$VERSION_ID/x86_64/ | cut -d\" -f2 | grep rpm | head -n1)
     # install
-    rpm -Uvh "$site/fedora/$VERSION_ID/x86_64/$filename"
+    yum install -y "$site/fedora/$VERSION_ID/x86_64/$filename"
 fi
