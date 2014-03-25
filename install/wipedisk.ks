@@ -6,9 +6,6 @@ lang en_US.UTF-8
 #System keyboard
 keyboard us
 
-#Use HTTP installation media
-url --url http://mirrors/fedora/releases/20/Fedora/i386/os
-
 #---------------------------------------------------------#
 # PRE-INSTALLATION
 #---------------------------------------------------------#
