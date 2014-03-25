@@ -23,7 +23,7 @@ echo >/dev/tty1
 echo "Wiping the hard disk (/dev/sda)" >/dev/tty1
 echo "Please wait..." >/dev/tty1
 
-dd if=/dev/urandom of=/dev/sda bs=8M >/dev/tty1 2>/dev/tty1
+shred --random-source=/dev/urandom --iterations=1 --zero --verbose /dev/sda >/dev/tty1 2>/dev/tty1 
 sync
 sync
 
