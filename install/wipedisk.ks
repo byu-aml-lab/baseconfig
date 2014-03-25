@@ -7,7 +7,7 @@ lang en_US.UTF-8
 keyboard us
 
 #Use HTTP installation media
-url --url http://mirrors/fedora/releases/18/Fedora/i386/os
+url --url http://mirrors/fedora/releases/20/Fedora/i386/os
 
 #---------------------------------------------------------#
 # PRE-INSTALLATION
@@ -23,7 +23,9 @@ echo >/dev/tty1
 echo "Wiping the hard disk (/dev/sda)" >/dev/tty1
 echo "Please wait..." >/dev/tty1
 
-dd if=/dev/zero of=/dev/sda bs=64k oflag=direct,dsync >/dev/tty1 2>/dev/tty1
+dd if=/dev/urandom of=/dev/sda bs=8M >/dev/tty1 2>/dev/tty1
+sync
+sync
 
 echo "done" >/tmp/wipedisk.log
 logger Done wiping hard disk
