@@ -250,6 +250,7 @@ wv
 xpdf
 
 # graphical systems tools
+arandr
 gparted
 
 %end
