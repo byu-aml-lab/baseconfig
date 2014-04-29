@@ -1,6 +1,9 @@
 %packages --ignoremissing
 
 golang
+golang-godoc
+golang-googlecode-goprotobuf
+golang-vet
 golang-vim
 
 %end
