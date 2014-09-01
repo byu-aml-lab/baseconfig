@@ -18,6 +18,10 @@ rm -f /etc/sysconfig/network-scripts/ifcfg-p*
 # Remove any HWADDR lines in ifcfg-*
 sed -i '/^HWADDR/d' /etc/sysconfig/network-scripts/ifcfg-*
 
+#Fix the cmdline
+sed -i '/+=.*biosdevname/d' /etc/default/grub
+echo "GRUB_CMDLINE_LINUX+=\" net.ifnames=0 biosdevname=0\"" >>/etc/default/grub
+
 # Mask udev's rule file for the default policy to disable the assignment of fixed names in Fedora 19
 ln -sf /dev/null /etc/udev/rules.d/80-net-name-slot.rules
 ln -sf /dev/null /etc/udev/rules.d/80-net-setup-link.rules
