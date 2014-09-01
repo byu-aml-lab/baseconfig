@@ -94,6 +94,7 @@ spin-kickstarts
 
 # Text Editors
 emacs
+- vim-minimal
 vim-enhanced
 vim-X11
 
