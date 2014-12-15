@@ -1,0 +1,11 @@
+default f20-i386-interactive
+
+label f20-i386-interactive
+    menu label Fedora 20 i386: Interactive Install
+    kernel f20-i386/vmlinuz
+    append initrd=f20-i386/initrd.img ip=dhcp repo=http://mirrors/fedora/releases/20/Fedora/i386/os/
+
+    text help
+
+    Install Fedora 20 i386 interactively.
+    endtext

@@ -1,0 +1,11 @@
+default f20-x86_64-interactive
+
+label f20-x86_64-interactive
+    menu label Fedora 20 x86_64: Interactive Install
+    kernel f20-x86_64/vmlinuz
+    append initrd=f20-x86_64/initrd.img ip=dhcp repo=http://mirrors/fedora/releases/20/Fedora/x86_64/os/
+
+    text help
+
+    Install Fedora 20 x86_64 interactively.
+    endtext
