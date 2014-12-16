@@ -1,0 +1,15 @@
+(note by Paul)
+Andrew McNabb was strongly opposed to (annoyed by) the new persistent naming scheme 
+for network interface names introduced by biosdevnames and udev, so he disabled it 
+using this profile. Read more about the issue here: 
+(http://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/). 
+
+This profile is in charge of disabling all services that alter network device 
+names so that the typical names (e.g., "eth0", "eth1") are used.
+If somebody wants to update all scripts that refer to eth0 and eth1 in the future,
+then they can get rid of this profile. They will need to put especially careful 
+thought into the firewall profile.
+
+You would think this change would be very simple. However, the way to disable 
+persistent naming has changed and gotten more complicated over a number of releases, 
+which is why the scripts here do so many things. 

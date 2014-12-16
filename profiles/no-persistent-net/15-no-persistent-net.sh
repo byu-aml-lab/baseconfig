@@ -18,16 +18,18 @@ rm -f /etc/sysconfig/network-scripts/ifcfg-p*
 # Remove any HWADDR lines in ifcfg-*
 sed -i '/^HWADDR/d' /etc/sysconfig/network-scripts/ifcfg-*
 
-#Fix the cmdline
-sed -i '/+=.*biosdevname/d' /etc/default/grub
-echo "GRUB_CMDLINE_LINUX+=\" net.ifnames=0 biosdevname=0\"" >>/etc/default/grub
+# Fix the cmdline so that it passes kernel commandline arguments 
+# that tell the kernel NOT to use the new udev persistent naming 
+# scheme. This adds a line with the form VAR+=" option" to the end 
+# of the grub file. This syntax concatenates the option onto the 
+# existing variable when the file is read by mkconfig in the next step.
+sed -i '/*^GRUB_CMDLINE_LINUX+=.*biosdevname.*/d' /etc/default/grub
+echo "GRUB_CMDLINE_LINUX+=\" net.ifnames=0 biosdevname=0\"" >> /etc/default/grub
+
+# make sure that grub knows about the above changes by compiling them into the actual config
+grub2-mkconfig -o /boot/grub2/grub.cfg
 
 # Mask udev's rule file for the default policy to disable the assignment of fixed names in Fedora 19
 ln -sf /dev/null /etc/udev/rules.d/80-net-name-slot.rules
 ln -sf /dev/null /etc/udev/rules.d/80-net-setup-link.rules
-
-# Note: we also pass the arguments "net.ifnames=0 biosdevname=0" to 
-# the kernel in /etc/default/grub. In fact, that is what really 
-# seems to remove the bios names in practice. The modifications
-# in this script keep things tidy, but may not all be necessary.
 
